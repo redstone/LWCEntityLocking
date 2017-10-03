@@ -120,7 +120,7 @@ public class JavaModule implements Module {
 	public void onSendLocale(LWCSendLocaleEvent event) {
 
 	}
-	
+
 	public void onEntityInteract(LWCEntityInteractEvent event) {
 
 	}
@@ -128,8 +128,9 @@ public class JavaModule implements Module {
 	public void onProtectionInteractEntity(
 			LWCProtectionInteractEntityEvent event) {
 	}
-	
+
 	public void onMagnetPull(LWCMagnetPullEvent event) {
-		
+
 	}
+	
 }

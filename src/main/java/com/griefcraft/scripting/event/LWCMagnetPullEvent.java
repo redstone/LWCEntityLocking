@@ -36,27 +36,27 @@ import org.bukkit.event.HandlerList;
 import com.griefcraft.scripting.ModuleLoader;
 
 public class LWCMagnetPullEvent extends LWCEvent implements Cancellable {
-	
+
 	private static final HandlerList handlers = new HandlerList();
 	private Item item;
-    private boolean cancelled;
+	private boolean cancelled;
 
-    public LWCMagnetPullEvent(Item item) {
-    	super(ModuleLoader.Event.MAGNET_PULL);
-    	
-        this.item = item;
-    }
+	public LWCMagnetPullEvent(Item item) {
+		super(ModuleLoader.Event.MAGNET_PULL);
 
-    public Item getItem() {
-        return item;
-    }
+		this.item = item;
+	}
 
-    public boolean isCancelled() {
-        return cancelled;
-    }
+	public Item getItem() {
+		return item;
+	}
 
-    public void setCancelled(boolean cancelled) {
-        this.cancelled = cancelled;
-    }
+	public boolean isCancelled() {
+		return cancelled;
+	}
+
+	public void setCancelled(boolean cancelled) {
+		this.cancelled = cancelled;
+	}
 
 }

@@ -89,7 +89,7 @@ public class ModuleLoader {
 		 * Called when a valid protection is left clicked
 		 */
 		INTERACT_PROTECTION(5),
-		
+
 		INTERACT_PROTECTION_ENTITY(5),
 
 		/**
@@ -147,11 +147,13 @@ public class ModuleLoader {
 		 * Called when LWC's config is reloaded
 		 */
 		RELOAD_EVENT,
-		
+
 		/**
-         * Called when the Magnet (flag) pulls an item
-         */
-        MAGNET_PULL(1);
+		 * Called when the Magnet (flag) pulls an item
+		*/
+		MAGNET_PULL(1),
+
+		;
 
 		Event() {
 		}
@@ -215,7 +217,7 @@ public class ModuleLoader {
 
 	/**
 	 * Register a module into the fast cache
-	 * 
+	 *
 	 * @param module
 	 */
 	private void registerFastCache(Module module) {
@@ -285,8 +287,8 @@ public class ModuleLoader {
 				} else if (parameter == LWCReloadEvent.class) {
 					event = Event.RELOAD_EVENT;
 				} else if (parameter == LWCMagnetPullEvent.class) {
-                	event = Event.MAGNET_PULL;
-                }
+					event = Event.MAGNET_PULL;
+				}
 
 				// ok!
 				if (event != null) {
@@ -381,7 +383,7 @@ public class ModuleLoader {
 				} else if (type == Event.RELOAD_EVENT) {
 					module.onReload((LWCReloadEvent) event);
 				}  else if (type == Event.MAGNET_PULL) {
-                	module.onMagnetPull((LWCMagnetPullEvent) event);
+					module.onMagnetPull((LWCMagnetPullEvent) event);
 				}
 			}
 		} catch (Throwable throwable) {
